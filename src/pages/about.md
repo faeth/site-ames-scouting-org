@@ -1,19 +1,21 @@
 ---
 title: Learn More About Scouting
 permalink: /about/index.html
-description: 'Scouting is one of the few activities you get to enjoy with your kids.'
+description: 'Scouting provides unique skills that compliment sports and other activities.'
 layout: page
 ---
 
-Scouting is one of the few activities you get to enjoy with your kids. Go on a hike, enjoy a campout with other families, work on a car for the Pinewood Derby race, learn about nature, and go on many more adventures together.
+Scouting offers unique skills that compliment sports and other activities. Scouts develop leadership skills, learn first aid, train outdoor skills, explore community service, and more. Scouts also enjoy adventures outside. Go on a hike, enjoy a campout, paddle the waterways in a canoe, and go on many more adventures.
 
-Scouting is for boys and girls in Kindergarten through 5th grade, and their parents.
+Scouting works with your schedule. Scouts can advance at their own pace and there are no mandatory meetings.
+
+Scouting is for all youth ages 5 through 17. Children ages 5-10 paricipate in Cub Scouts and ages 11-17 particpate in Scouts BSA.
 
 ## See some of the fun Scouts enjoy
 
 <div>
 <custom-youtube 
-@slug="IQT69ioxkK8" 
+@slug="yREQNjPMDYA"
 @label="Scouting America"> 
 </custom-youtube>
 </div>
