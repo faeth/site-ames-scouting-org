@@ -12,7 +12,7 @@ New Scouts are welcome at any age. Plenty of youth join in middle school or high
 ## What Scouts do
 
 - Camp year-round, from weekend campouts to week-long summer camp and high-adventure treks
-- Earn merit badges in more than 130 subjects, from First Aid and Camping to Robotics and Aviation
+- Earn merit badges in more than 135 subjects, from First Aid and Camping to Robotics and Aviation
 - Lead their patrol and troop, building real responsibility and confidence
 - Serve the community and work toward Scouting's highest rank: Eagle Scout
 
