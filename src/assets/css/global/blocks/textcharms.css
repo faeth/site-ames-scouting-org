@@ -1,0 +1,17 @@
+.charm-text::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  font-size: inherit;
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 0.5rem;
+  background-color: var(--color-secondary);
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><polygon points='12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><polygon points='12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9'/></svg>");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+

@@ -1,0 +1,146 @@
+/* Join page: a polaroid-style square card split into two photo buttons.
+   The label bars are extensions of the card frame, so the text never
+   sits on top of a photo. */
+
+.grade-selector {
+  /* The card is sized from the viewport height, capped by available width */
+  --card-size: min(80svh, 100% - 2 * var(--gutter));
+  --frame: clamp(0.625rem, 2vw, 1.25rem);
+  --divide: clamp(0.375rem, 1.2vw, 0.75rem);
+  --slash: 8%;
+
+  inline-size: var(--card-size);
+  margin-inline: auto;
+  padding-block: var(--space-m-l) var(--space-l-xl);
+}
+
+@supports not (inline-size: 1svh) {
+  .grade-selector {
+    --card-size: min(80vh, 100% - 2 * var(--gutter));
+  }
+}
+
+.grade-selector__title {
+  color: var(--color-text);
+  font-size: var(--size-step-3);
+  margin-block-end: var(--space-s-m);
+}
+
+.grade-card {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--divide);
+  padding: var(--frame);
+  background-color: var(--color-sa-white);
+  box-shadow:
+    0 2px 6px rgb(0 0 0 / 18%),
+    0 14px 32px rgb(0 0 0 / 14%);
+}
+
+.grade-panel {
+  --label-bg: var(--color-sa-blue);
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-block-size: 0;
+  text-decoration: none;
+}
+
+.grade-panel--bsa {
+  --label-bg: var(--color-scouts-bsa-olive);
+}
+
+.grade-panel:focus-visible {
+  outline: 3px solid var(--color-sa-blue);
+  outline-offset: 3px;
+}
+
+.grade-panel__label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background-color: var(--label-bg);
+  color: var(--color-sa-white);
+  font-family: var(--font-display);
+  font-size: var(--size-step-2);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-fine);
+  padding: var(--space-xs) var(--space-s);
+  transition: background-color var(--transition-duration) var(--transition-timing);
+}
+
+.grade-panel--bsa .grade-panel__label {
+  justify-content: flex-end;
+}
+
+.grade-panel:hover .grade-panel__label,
+.grade-panel:focus-visible .grade-panel__label {
+  background-color: color-mix(in oklab, var(--label-bg) 80%, var(--color-sa-white));
+}
+
+.grade-panel:hover .grade-panel__label-text,
+.grade-panel:focus-visible .grade-panel__label-text {
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+}
+
+.grade-panel__media {
+  flex: 1;
+  min-block-size: 0;
+  overflow: hidden;
+}
+
+/* The card background shows through the slanted clip edges, drawing the
+   diagonal divider; without clip-path support the divider is a straight gap */
+.grade-panel--cubs .grade-panel__media {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--slash)), 0 100%);
+}
+
+.grade-panel--bsa .grade-panel__media {
+  clip-path: polygon(0 var(--slash), 100% 0, 100% 100%, 0 100%);
+}
+
+.grade-panel__img {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+  transition: filter var(--transition-duration) var(--transition-timing);
+}
+
+.grade-panel:hover .grade-panel__img,
+.grade-panel:focus-visible .grade-panel__img {
+  filter: brightness(1.12);
+}
+
+/* Motion effects only for users who haven't asked for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .grade-panel__img {
+    transition:
+      filter var(--transition-duration) var(--transition-timing),
+      transform var(--transition-duration) var(--transition-timing);
+  }
+
+  .grade-panel:hover .grade-panel__img,
+  .grade-panel:focus-visible .grade-panel__img {
+    transform: scale(1.04);
+  }
+
+  .grade-panel__label svg {
+    transition: transform var(--transition-duration) var(--transition-timing);
+  }
+
+  .grade-panel:hover .grade-panel__label svg,
+  .grade-panel:focus-visible .grade-panel__label svg {
+    transform: translateX(0.3em);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grade-panel__img,
+  .grade-panel__label {
+    transition: none;
+  }
+}

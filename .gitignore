@@ -1,0 +1,19 @@
+# Node modules
+node_modules
+
+# generated files
+dist
+src/_includes/css
+src/_includes/scripts
+
+# cache
+.cache
+
+# secret data
+.env
+
+# AI assistants
+.claude
+
+# OS X Files
+.DS_Store

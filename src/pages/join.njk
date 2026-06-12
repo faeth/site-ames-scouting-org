@@ -1,0 +1,32 @@
+---
+title: Join Ames Scouts
+permalink: /join/index.html
+description: 'Join Ames Scouts'
+layout: base
+---
+
+{%- css "local" -%}
+{%- include 'css/join.css' -%}
+{%- endcss -%}
+
+<section class="grade-selector">
+  <h1 class="grade-selector__title">My child is in:</h1>
+
+  <div class="grade-card">
+    <a class="grade-panel grade-panel--cubs" href="https://amescubscouts.org/join">
+      <span class="grade-panel__label">
+        <span class="grade-panel__label-text">K&ndash;5th grade</span>
+        {% svg "misc/arrow-right" %}
+      </span>
+      {% image "/assets/images/scouting-america/cub_scouts_girls_camping_tent.jpg", "", "", "eager", "grade-panel__media", "grade-panel__img", [650, 960, 1400], "min(80vh, 92vw)" %}
+    </a>
+
+    <a class="grade-panel grade-panel--bsa" href="/join-scouting-america/">
+      {% image "/assets/images/scouting-america/scouting_america_boys_camping_tent.jpg", "", "", "eager", "grade-panel__media", "grade-panel__img", [650, 960, 1400], "min(80vh, 92vw)" %}
+      <span class="grade-panel__label">
+        <span class="grade-panel__label-text">6th&ndash;12th grade</span>
+        {% svg "misc/arrow-right" %}
+      </span>
+    </a>
+  </div>
+</section>
